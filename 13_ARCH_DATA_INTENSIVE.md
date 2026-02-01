@@ -31,14 +31,14 @@ graph TD
 
     subgraph Geo_Core ["Geospatial Core"]
         Ringpop[Ringpop (Gossip/Sharding)]
-        GeoIndx[(Redis Geo Index)]
+        GeoIndx[("Redis Geo Index")]
         Maps[Maps / ETA Service]
     end
 
     subgraph Trip_Mgmt ["Trip Lifecycle"]
         TripSvc[Trip Service]
         Events[Kafka - Trip Events]
-        Archive[(Cassandra - Trip History)]
+        Archive[("Cassandra - Trip History")]
     end
 
     %% Driver Flow
@@ -91,9 +91,9 @@ graph LR
     end
 
     subgraph Databases
-        Dynamo_Cart[(DynamoDB - Cart)]
-        RDS_Inv[(Oracle/Aurora - Inventory)]
-        ES[(Elasticsearch - Catalog)]
+        Dynamo_Cart[("DynamoDB - Cart")]
+        RDS_Inv[("Oracle/Aurora - Inventory")]
+        ES[("Elasticsearch - Catalog")]
     end
 
     %% Flow
@@ -137,12 +137,12 @@ graph TD
     subgraph Control ["Meta-Data Handling"]
         TalkService[Notification / Talk Service]
         MetaServer[Metadata Server]
-        Edgestore[(Edgestore - Metadata DB)]
+        Edgestore[("Edgestore - Metadata DB")]
     end
 
     subgraph Block_Store ["Block Handling"]
         BlockServer[Block Server]
-        MagicPocket[(Magic Pocket / S3)]
+        MagicPocket[("Magic Pocket / S3")]
     end
 
     %% Upload Flow
@@ -192,8 +192,8 @@ graph LR
     end
 
     subgraph Storage
-        BigTable[(BigTable - WebTable)]
-        DocIndx[(Document Index)]
+        BigTable[("BigTable - WebTable")]
+        DocIndx[("Document Index")]
     end
 
     %% Flow

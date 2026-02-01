@@ -32,13 +32,13 @@ graph TD
     end
 
     subgraph Data_Layer ["Data Persistance"]
-        EVCache[(EVCache (Memcached))]
-        Cassandra[(Cassandra Cluster)]
+        EVCache[("EVCache (Memcached)")]
+        Cassandra[("Cassandra Cluster")]
         Kafka[Kafka Data Pipeline]
     end
 
     subgraph Content_Pipeline ["Content Processing"]
-        S3_Master[(AWS S3 Master Files)]
+        S3_Master[("AWS S3 Master Files")]
         Archer[Archer (Encoding Orchestrator)]
         Chunker[File Chunker]
     end
@@ -94,7 +94,7 @@ Netflix employs **Chaos Monkey** to kill random services.
 graph TD
     subgraph User_A ["Sender (Mobile App)"]
         ClientA[WhatsApp Client]
-        LocalDB_A[(SQLite Local DB)]
+        LocalDB_A[("SQLite Local DB")]
     end
 
     subgraph Load_Balancing ["Connection Layer"]
@@ -108,14 +108,14 @@ graph TD
     end
 
     subgraph Data_Stores ["Backend Stores"]
-        Mnesia[(Mnesia - Session Map)]
-        Redis[(Redis - Recent Cache)]
-        MsgStore[(Cassandra - Offline Msgs)]
+        Mnesia[("Mnesia - Session Map")]
+        Redis[("Redis - Recent Cache")]
+        MsgStore[("Cassandra - Offline Msgs")]
     end
 
     subgraph Media_Handling ["Media Blob Store"]
         WebServer[HTTP Web Server]
-        BlobStore[(YATP / Blob Storage)]
+        BlobStore[("YATP / Blob Storage")]
     end
 
     subgraph User_B ["Receiver (Mobile App)"]
@@ -172,7 +172,7 @@ graph TD
         Web[Web Server]
         GlobalCtrl[Global Controller]
         ZoneCtrl[Zone Controller]
-        ZC_DB[(Redis/DynamoDB)]
+        ZC_DB[("Redis/DynamoDB")]
     end
 
     subgraph Data_Plane ["Multimedia Transport (UDP/RTP)"]
@@ -181,7 +181,7 @@ graph TD
     end
 
     subgraph Storage ["Cloud Recording"]
-        S3[(AWS S3 / Oracle Cloud)]
+        S3[("AWS S3 / Oracle Cloud")]
     end
 
     %% Flow Setup

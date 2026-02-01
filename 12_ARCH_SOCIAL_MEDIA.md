@@ -29,10 +29,10 @@ graph TD
     end
 
     subgraph Data_Layer ["Storage & Cache"]
-        Redis_User[(Redis - User UserTimeline)]
-        Redis_Home[(Redis Cluster - Home Timeline)]
-        Manhattan[(Manhattan DB - Tweet Store)]
-        FlockDB[(FlockDB - Social Graph)]
+        Redis_User[("Redis - User UserTimeline")]
+        Redis_Home[("Redis Cluster - Home Timeline")]
+        Manhattan[("Manhattan DB - Tweet Store")]
+        FlockDB[("FlockDB - Social Graph")]
     end
 
     %% Write Flow
@@ -80,15 +80,15 @@ graph TD
     end
 
     subgraph Storage ["Data persistence"]
-        S3[(AWS S3 - Blob Store)]
-        Postgres[(PostgreSQL Shards - Metadata)]
-        Cassandra[(Cassandra - Activity Feed)]
+        S3[("AWS S3 - Blob Store")]
+        Postgres[("PostgreSQL Shards - Metadata")]
+        Cassandra[("Cassandra - Activity Feed")]
     end
 
     subgraph Delivery ["Reading / Viewing"]
         CDN[Global CDN (CloudFront)]
         FeedSvc[Feed Construction Service]
-        TAO[(TAO - Graph API)]
+        TAO[("TAO - Graph API")]
     end
 
     %% Upload Flow
@@ -139,9 +139,9 @@ graph TD
     end
 
     subgraph Data ["Datastores"]
-        Redis_Geo[(Redis Geo/Cluster)]
-        DynamoDB[(DynamoDB - Profiles)]
-        Elastic[(Elasticsearch - Filters)]
+        Redis_Geo[("Redis Geo/Cluster")]
+        DynamoDB[("DynamoDB - Profiles")]
+        Elastic[("Elasticsearch - Filters")]
         Kafka[Kafka - Likes Stream]
     end
 
