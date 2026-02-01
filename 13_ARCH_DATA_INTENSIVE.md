@@ -42,7 +42,7 @@ graph TD
     end
 
     %% Driver Flow
-    Driver -->|1. GPS Ping (4s)| Edge
+    Driver -->|1. GPS Ping 4s| Edge
     Edge --> SupplySvc
     SupplySvc -->|2. Update Location| GeoIndx
     SupplySvc -.->|3. Publish State| Ringpop
@@ -103,11 +103,11 @@ graph LR
     Browser -->|3. Place Order| Checkout
     Checkout -->|4. Create Order| Order
     
-    Order -->|5. Reserve Item (Lock)| Inv
+    Order -->|5. Reserve Item Lock| Inv
     Inv -->|6. SQL Update| RDS_Inv
     
     Inv -->|7a. Success| Order
-    Inv -->|7b. Fail (OOS)| Order
+    Inv -->|7b. Fail OOS| Order
     
     Order -->|8. Async Workflow| Fulfillment[Fulfillment Center]
 ```
@@ -150,7 +150,7 @@ graph TD
     Chunker -->|2. Hash Blocks| Hasher
     Hasher -->|3. Check Existence| MetaServer
     
-    MetaServer -->|4a. Exists (Dedup)| Edgestore
+    MetaServer -->|4a. Exists - Dedup| Edgestore
     MetaServer -->|4b. Not Found| BlockServer
     
     BlockServer -->|5. Upload Bytes| MagicPocket

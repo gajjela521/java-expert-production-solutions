@@ -168,16 +168,16 @@ graph TD
         Network[Network Adaptive Layer]
     end
 
-    subgraph Control_Plane ["Signaling & Control (HTTP/TCP)"]
+    subgraph Control_Plane ["Signaling & Control HTTP-TCP"]
         Web[Web Server]
         GlobalCtrl[Global Controller]
         ZoneCtrl[Zone Controller]
         ZC_DB[("Redis/DynamoDB")]
     end
 
-    subgraph Data_Plane ["Multimedia Transport (UDP/RTP)"]
-        MMR_Edge[Multimedia Router (Edge) - SFU]
-        MMR_Cloud[Multimedia Router (Cloud)]
+    subgraph Data_Plane ["Multimedia Transport UDP-RTP"]
+        MMR_Edge["Multimedia Router (Edge) - SFU"]
+        MMR_Cloud["Multimedia Router (Cloud)"]
     end
 
     subgraph Storage ["Cloud Recording"]

@@ -44,8 +44,8 @@ graph TD
     Fanout -->|5. Get Followers| UserGraph
     UserGraph -.-> FlockDB
     
-    Fanout -->|6A. Small Follower Count (Push)| Redis_Home
-    Fanout -->|6B. Celebrity (Pull)| Redis_User
+    Fanout -->|6A. Small Follower Count - Push| Redis_Home
+    Fanout -->|6B. Celebrity - Pull| Redis_User
 
     %% Read Flow
     App -->|7. Get Feed| TimelineSvc
@@ -157,7 +157,7 @@ graph TD
     %% Recommendation Flow
     App -->|5. Get Potential Matches| RecSvc
     RecSvc -->|6. Query Region| Redis_Geo
-    RecSvc -->|7. Apply Filters (Age/Tags)| Elastic
+    RecSvc -->|7. Apply Filters - Age Tags| Elastic
     RecSvc -->|8. Exclude Swiped| DynamoDB
 ```
 
