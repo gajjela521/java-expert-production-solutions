@@ -130,7 +130,7 @@ graph TD
     subgraph User_PC ["Desktop Client"]
         File[File System]
         Watcher[File Watcher]
-        Chunker[Chunker (4MB)]
+        Chunker["Chunker (4MB)"]
         Hasher[SHA-256 Hasher]
     end
 
