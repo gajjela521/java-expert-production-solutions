@@ -185,12 +185,12 @@ graph TD
     end
 
     %% Flow Setup
-    SDK -->|1. Join Meeting (HTTPS)| Web
+    SDK -->|1. Join Meeting HTTPS| Web
     Web -->|2. Assign ZC| GlobalCtrl
     GlobalCtrl -->|3. Assign Best MMR| ZoneCtrl
     
     %% Media Stream
-    Network -->|4. Video Stream (RTP)| MMR_Edge
+    Network -->|4. Video Stream RTP| MMR_Edge
     MMR_Edge -->|5. Forward Stream| OtherClients[Other Participants]
     
     %% Recording
