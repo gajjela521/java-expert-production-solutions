@@ -25,7 +25,7 @@ graph TD
     subgraph Core_Services ["Backend Services"]
         Fanout[Fanout Service]
         UserGraph[User Graph Service]
-        Search[Search Service (Earlybird)]
+        Search["Search Service (Earlybird)"]
     end
 
     subgraph Data_Layer ["Storage & Cache"]
@@ -75,7 +75,7 @@ graph TD
 
     subgraph Ingestion ["Upload Path"]
         LB_Up[Load Balancer]
-        AsyncWorker[Async Worker (Celery)]
+        AsyncWorker["Async Worker (Celery)"]
         MediaSvc[Media Service]
     end
 
@@ -86,7 +86,7 @@ graph TD
     end
 
     subgraph Delivery ["Reading / Viewing"]
-        CDN[Global CDN (CloudFront)]
+        CDN["Global CDN (CloudFront)"]
         FeedSvc[Feed Construction Service]
         TAO[("TAO - Graph API")]
     end

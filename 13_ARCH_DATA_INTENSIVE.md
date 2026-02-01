@@ -24,13 +24,13 @@ graph TD
     end
 
     subgraph DISCO ["DISCO (Dispatch System)"]
-        SupplySvc[Supply Service (Drivers)]
-        DemandSvc[Demand Service (Riders)]
+        SupplySvc["Supply Service (Drivers)"]
+        DemandSvc["Demand Service (Riders)"]
         Matching[Matching Engine]
     end
 
     subgraph Geo_Core ["Geospatial Core"]
-        Ringpop[Ringpop (Gossip/Sharding)]
+        Ringpop["Ringpop (Gossip/Sharding)"]
         GeoIndx[("Redis Geo Index")]
         Maps[Maps / ETA Service]
     end
@@ -176,7 +176,7 @@ graph TD
 ```mermaid
 graph LR
     subgraph Scheduler
-        URL_F[URL Frontier (Priority Queue)]
+        URL_F["URL Frontier (Priority Queue)"]
         DNS_C[DNS Resolver / Cache]
     end
 

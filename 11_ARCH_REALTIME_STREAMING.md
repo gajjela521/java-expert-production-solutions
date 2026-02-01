@@ -39,7 +39,7 @@ graph TD
 
     subgraph Content_Pipeline ["Content Processing"]
         S3_Master[("AWS S3 Master Files")]
-        Archer[Archer (Encoding Orchestrator)]
+        Archer["Archer (Encoding Orchestrator)"]
         Chunker[File Chunker]
     end
 
