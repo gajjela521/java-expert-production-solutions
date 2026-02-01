@@ -52,6 +52,24 @@ This repository contains expert-level documentation and implementation patterns 
     *   **Spring Boot Actuator**: Health checks (Liveness/Readiness).
     *   **Alerting**: RED Method and Golden Signals.
 
+## 🏗 System Design Architectures (Top Tech)
+
+### 11. [Real-Time & Streaming](./11_ARCH_REALTIME_STREAMING.md)
+*   **Netflix**: Cell-Based Architecture, Transcoding, Open Connect CDN.
+*   **WhatsApp**: Erlang, Mnesia, Socket optimization (2M conn/server).
+*   **Zoom**: WebRTC, UDP, SFU vs MCU topology.
+
+### 12. [Social Media Architectures](./12_ARCH_SOCIAL_MEDIA.md)
+*   **Twitter**: Fanout-on-Write vs Read, Redis Clusters, Snowflake IDs.
+*   **Instagram**: Sharding Photos (Logical vs Physical), S3 + CDN.
+*   **Tinder**: Geohashing, Redis Georadius, Elastic storage.
+
+### 13. [Data Intensive & Logistics](./13_ARCH_DATA_INTENSIVE.md)
+*   **Uber**: QuadTree/S2 Geometry, Ringpop (Gossip), Driver Dispatch.
+*   **Amazon**: Vector Clocks (Cart), Optimistic Locking (Inventory).
+*   **Dropbox**: 4MB Block Chunking, Deduplication, Meta-data DB split.
+*   **Google Crawler**: URL Frontier, Bloom Filters, BigTable.
+
 ## 🛠 Tech Stack
 *   **Language**: Java 17 / 21
 *   **Framework**: Spring Boot 3.x
